@@ -1,0 +1,13 @@
+if [[ "$TERM_PROGRAM" == "vscode" || "$TERM_PROGRAM" == "cursor" ]]; then
+    
+    # 1. 临时禁用复杂主题，例如 Powerlevel10k
+    ZSH_THEME=""
+    
+    # 2. 设置一个简单、纯净的提示符，避免干扰 Agent 的 Shell 集成标记
+    PROMPT='%n@%m:%~%# '
+    
+    # 3. 退出，不再继续加载可能导致冲突的后续配置
+    # 比如 Oh My Zsh 的全部配置和 Powerlevel10k 的初始化脚本等，
+    # 这样可以确保终端启动速度最快，并且提示符最干净。
+    return
+fi
