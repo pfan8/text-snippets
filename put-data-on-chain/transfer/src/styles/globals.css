@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  /* 自定义颜色 */
+  --color-metamask-50: #fff7ed;
+  --color-metamask-100: #ffedd5;
+  --color-metamask-200: #fed7aa;
+  --color-metamask-300: #fdba74;
+  --color-metamask-400: #fb923c;
+  --color-metamask-500: #f97316;
+  --color-metamask-600: #ea580c;
+  --color-metamask-700: #c2410c;
+  --color-metamask-800: #9a3412;
+  --color-metamask-900: #7c2d12;
+
+  --color-cute-50: #fdf2f8;
+  --color-cute-100: #fce7f3;
+  --color-cute-200: #fbcfe8;
+  --color-cute-300: #f9a8d4;
+  --color-cute-400: #f472b6;
+  --color-cute-500: #ec4899;
+  --color-cute-600: #db2777;
+
+  --color-soft-50: #faf5ff;
+  --color-soft-100: #f3e8ff;
+  --color-soft-200: #e9d5ff;
+  --color-soft-300: #d8b4fe;
+  --color-soft-400: #c084fc;
+  --color-soft-500: #a855f7;
+
+  /* 自定义字体 */
+  --font-family-cute: Nunito, Quicksand, sans-serif;
+
+  /* 自定义阴影 */
+  --shadow-cute: 0 4px 14px 0 rgba(249, 115, 22, 0.2);
+  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  font-family: var(--font-family-cute);
+  background: linear-gradient(to bottom right, var(--color-cute-50), white, var(--color-soft-50));
+}
+
+/* 自定义组件类 */
+.card {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  border: 2px solid #e5e7eb;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, var(--color-metamask-400), var(--color-metamask-600));
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-cute);
+  transform-origin: center;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, var(--color-metamask-500), var(--color-metamask-700));
+  box-shadow: var(--shadow-soft);
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background: linear-gradient(to right, var(--color-cute-400), var(--color-soft-400));
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-cute);
+  transform-origin: center;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(to right, var(--color-cute-500), var(--color-soft-500));
+  box-shadow: var(--shadow-soft);
+  transform: scale(1.05);
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  border: 2px solid var(--color-metamask-200);
+  font-family: var(--font-family-cute);
+  color: #374151;
+  transition: all 0.2s;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--color-cute-400);
+  ring: 2px;
+  ring-color: var(--color-cute-200);
+}
